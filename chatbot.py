@@ -21,6 +21,8 @@ import json
 
 #!pip install --upgrade tensorflow
 import tensorflow as tf
+
+tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 from tensorflow import keras
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.preprocessing import LabelEncoder
@@ -106,8 +108,6 @@ json_object = json.dumps(tag_responses, indent=4)
 
 with open("responses.json", "w") as outfile:
     outfile.write(json_object)
-
-# os.system("CLS")
 
 
 # # # Transforming input and predicting intent
