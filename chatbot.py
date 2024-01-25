@@ -77,25 +77,25 @@ training_data_tags_dummy_encoded = pd.get_dummies(
     training_data_tags_le["tags"]
 ).to_numpy()
 
-# # Creating the DNN
-# hospitalbot = Sequential()
-# hospitalbot.add(Dense(10, input_shape=(len(training_data_tfidf[0]),)))
-# hospitalbot.add(Dense(8))
-# hospitalbot.add(Dense(8))
-# hospitalbot.add(Dense(6))
-# hospitalbot.add(Dense(len(training_data_tags_dummy_encoded[0]), activation="softmax"))
-# hospitalbot.compile(
-#     optimizer="rmsprop", loss="categorical_crossentropy", metrics="accuracy"
-# )
+# Creating the DNN
+hospitalbot = Sequential()
+hospitalbot.add(Dense(10, input_shape=(len(training_data_tfidf[0]),)))
+hospitalbot.add(Dense(8))
+hospitalbot.add(Dense(8))
+hospitalbot.add(Dense(6))
+hospitalbot.add(Dense(len(training_data_tags_dummy_encoded[0]), activation="softmax"))
+hospitalbot.compile(
+    optimizer="rmsprop", loss="categorical_crossentropy", metrics="accuracy"
+)
 
-# # Fitting DNN
-# hospitalbot.fit(
-#     training_data_tfidf, training_data_tags_dummy_encoded, epochs=100, batch_size=32
-# )
+# Fitting DNN
+hospitalbot.fit(
+    training_data_tfidf, training_data_tags_dummy_encoded, epochs=100, batch_size=32
+)
 
 # save_model(hospitalbot, "HospitalBot_v2")
 
-hospitalbot = load_model("HospitalBot_v2")
+# hospitalbot = load_model("HospitalBot_v2")
 
 tags = [item["tag"] for item in intents["intents"]]
 resp = [item["responses"] for item in intents["intents"]]

@@ -958,3 +958,99 @@ searching for hospital to transfer patient	hospital_search
 i want to search hospital data	hospital_search
 hospital lookup for patient	hospital_search
 looking up hospital details	hospital_search
+patterns	tags
+hi there	greeting
+how are you	greeting
+is anyone there?	greeting
+hey	greeting
+hola	greeting
+hello	greeting
+good day	greeting
+bye	goodbye
+see you later	goodbye
+goodbye	goodbye
+nice chatting to you, bye	goodbye
+till next time	goodbye
+thanks	thanks
+thank you	thanks
+that's helpful	thanks
+awesome, thanks	thanks
+thanks for helping me	thanks
+how you could help me?	options
+what you can do?	options
+what help you provide?	options
+how you can be helpful?	options
+what support is offered	options
+how to check adverse drug reaction?	adverse_drug
+open adverse drugs module	adverse_drug
+give me a list of drugs causing adverse behavior	adverse_drug
+list all drugs suitable for patient with adverse reaction	adverse_drug
+which drugs dont have adverse reaction?	adverse_drug
+open blood pressure module	blood_pressure
+task related to blood pressure	blood_pressure
+blood pressure data entry	blood_pressure
+i want to log blood pressure results	blood_pressure
+blood pressure data management	blood_pressure
+i want to search for blood pressure result history	blood_pressure_search
+blood pressure for patient	blood_pressure_search
+load patient blood pressure result	blood_pressure_search
+show blood pressure results for patient	blood_pressure_search
+find blood pressure results by id	blood_pressure_search
+find me a pharmacy	pharmacy_search
+find pharmacy	pharmacy_search
+list of pharmacies nearby	pharmacy_search
+locate pharmacy	pharmacy_search
+search pharmacy	pharmacy_search
+lookup for hospital	hospital_search
+searching for hospital to transfer patient	hospital_search
+i want to search hospital data	hospital_search
+hospital lookup for patient	hospital_search
+looking up hospital details	hospital_search
+patterns	tags
+hi there	greeting
+how are you	greeting
+is anyone there?	greeting
+hey	greeting
+hola	greeting
+hello	greeting
+good day	greeting
+bye	goodbye
+see you later	goodbye
+goodbye	goodbye
+nice chatting to you, bye	goodbye
+till next time	goodbye
+thanks	thanks
+thank you	thanks
+that's helpful	thanks
+awesome, thanks	thanks
+thanks for helping me	thanks
+how you could help me?	options
+what you can do?	options
+what help you provide?	options
+how you can be helpful?	options
+what support is offered	options
+how to check adverse drug reaction?	adverse_drug
+open adverse drugs module	adverse_drug
+give me a list of drugs causing adverse behavior	adverse_drug
+list all drugs suitable for patient with adverse reaction	adverse_drug
+which drugs dont have adverse reaction?	adverse_drug
+open blood pressure module	blood_pressure
+task related to blood pressure	blood_pressure
+blood pressure data entry	blood_pressure
+i want to log blood pressure results	blood_pressure
+blood pressure data management	blood_pressure
+i want to search for blood pressure result history	blood_pressure_search
+blood pressure for patient	blood_pressure_search
+load patient blood pressure result	blood_pressure_search
+show blood pressure results for patient	blood_pressure_search
+find blood pressure results by id	blood_pressure_search
+find me a pharmacy	pharmacy_search
+find pharmacy	pharmacy_search
+list of pharmacies nearby	pharmacy_search
+locate pharmacy	pharmacy_search
+search pharmacy	pharmacy_search
+lookup for hospital	hospital_search
+searching for hospital to transfer patient	hospital_search
+i want to search hospital data	hospital_search
+hospital lookup for patient	hospital_search
+looking up hospital details	hospital_search
