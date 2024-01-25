@@ -104,6 +104,16 @@ section {
     color: white;
 }
 
+.result {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url('/static/images/predict_background.jpg');
+    background-size: cover;
+    background-position: right;
+    color: white;
+}
+
 .home .content {
     max-width: 800px;
 }
