@@ -21,8 +21,9 @@ def index():
 
 #     return render_template("result.html", respose=response)
 
-os.system("CLS")
-start_chat_v2()
+
+# os.system("CLS")
+# start_chat_v2()
 
 if __name__ == "__main__":
     app.run(debug=True)
