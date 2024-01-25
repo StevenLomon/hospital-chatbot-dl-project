@@ -107,7 +107,7 @@ json_object = json.dumps(tag_responses, indent=4)
 with open("responses.json", "w") as outfile:
     outfile.write(json_object)
 
-os.system("CLS")
+# os.system("CLS")
 
 
 # # # Transforming input and predicting intent
