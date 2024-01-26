@@ -1,6 +1,5 @@
 // chatbot.js
 
-let currentContext = "";
 const responseContainer = document.getElementById("response-container");
 const userInput = document.getElementById("user-input");
 
@@ -46,14 +45,21 @@ async function sendMessage() {
     // Access the chatbot response from the server
     const chatbotResponse = data.chatbot_response;
 
+    // Access the chatbot response from the server
+    const currentContext = data.current_context;
+
     // Clear user input
     userInput.value = "";
+
+    console.log(currentContext)
 
     // Display user message
     responseContainer.innerHTML += `<div class="user-message">${userMessage}</div>`;
 
     // Simulate delay before chatbot response
     await sleep(1000);
+
+    console.log(currentContext)
 
     // Simulate chatbot response with typing effect
     // const chatbotResponse = simulateChatbotResponse(userMessage);

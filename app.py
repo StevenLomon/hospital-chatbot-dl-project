@@ -17,6 +17,7 @@ def index():
 
 @app.route("/chat", methods=["GET", "POST"])
 def chat():
+    global current_context
     current_context = ""
 
     if request.method == "GET":
@@ -34,12 +35,16 @@ def chat():
 
         chatbot_response = generate_response(tag, current_context)
         update_context(tag)
-        # current_context = current_context
+        current_context = current_context
 
         time.sleep(1)
         print(current_context)
         return jsonify(
-            {"user_message": user_message, "chatbot_response": chatbot_response}
+            {
+                "user_message": user_message,
+                "current_context": current_context,
+                "chatbot_response": chatbot_response,
+            }
         )
 
 
