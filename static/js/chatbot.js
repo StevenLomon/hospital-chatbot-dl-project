@@ -45,7 +45,7 @@ async function sendMessage() {
     // Access the chatbot response from the server
     const chatbotResponse = data.chatbot_response;
 
-    // Access the chatbot response from the server
+    // Access the current context from the server
     const currentContext = data.current_context;
 
     // Clear user input
@@ -65,4 +65,14 @@ async function sendMessage() {
     // const chatbotResponse = simulateChatbotResponse(userMessage);
     typeResponse(chatbotResponse);
 
+    // if (chatbotResponse === "Please provide pharmacy name") {
+    //     newContext = "search_pharmacy_by_name"
+    //     // Make an AJAX request to the Flask server
+    //     const context = await fetch("/chat", {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         },
+    //         body: JSON.stringify({ newContext }),
+    //     });
 }
