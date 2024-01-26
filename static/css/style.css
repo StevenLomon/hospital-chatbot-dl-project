@@ -104,16 +104,6 @@ section {
     color: white;
 }
 
-.result {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background: url('/static/images/predict_background.jpg');
-    background-size: cover;
-    background-position: right;
-    color: white;
-}
-
 .home .content {
     max-width: 800px;
 }
@@ -132,8 +122,19 @@ section {
     color: #eee;
 }
 
+.chat {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url('/static/images/predict_background.jpg');
+    background-size: cover;
+    background-position: right;
+    color: white;
+}
 
-
+.chat .content {
+    max-width: 2400;
+}
 
 .card {
     width: 500px;
@@ -324,4 +325,27 @@ h2 {
     text-transform: none;
     background: none;
     border: none;
+}
+
+#response-container {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#user-input-container {
+    display: flex;
+}
+
+#user-input {
+    flex: 1;
+    padding: 8px;
+    margin-right: 8px;
+}
+
+button {
+    padding: 8px;
+    cursor: pointer;
 }

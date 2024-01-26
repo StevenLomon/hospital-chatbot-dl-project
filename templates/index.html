@@ -5,18 +5,18 @@
 
 
 <section class="home" id="home">
-
     <div class="content">
         <h3>Hi!</h3>
         <h1>How can I help you today?</h1>
-        <!-- <a class="ctabutton" href="#">Contact</a> -->
-        <form action="/predict" method="POST">
-            <input type="text" id="userinput" name="userinput" value="Message HEALTH•E"><br>
-            <input type="submit" value="Submit">
-        </form>
+        <button id="chatButton">Chat with HEALTH•E</button>
     </div>
-
 </section>
 
+<script>
+    document.getElementById('chatButton').addEventListener('click', function () {
+        // Use window.location.href to navigate to the /chat route
+        window.location.href = '/chat';
+    });
+</script>
 
 {% endblock %}

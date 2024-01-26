@@ -1,7 +1,6 @@
-import os
-from flask import Flask, render_template, request
+import time
+from flask import Flask, render_template, request, jsonify
 from chatbot import (
-    start_chat_v2,
     fuzzy_match,
     predict_tag_v2,
     generate_response,
@@ -16,30 +15,33 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/predict", methods=["POST", "GET"])
-def predict():
+@app.route("/chat", methods=["GET", "POST"])
+def chat():
     current_context = ""
 
-    # Get input from the form
-    input_data = request.form["userinput"]
-    print("Input Data:", input_data)
+    if request.method == "GET":
+        # Render the chat page initially
+        return render_template("chat.html")
 
-    # Use your model to make predictions
-    fuzzy_check = fuzzy_match(input_data.lower())
-    tag = predict_tag_v2(fuzzy_check)
-    response = generate_response(tag, current_context)
-    print(f"Response Data: {response}")
-    update_context(tag)
+    elif request.method == "POST":
+        if current_context is not None and len(current_context) > 2:
+            tag = current_context
+        else:
+            # Handle the AJAX request for sending messages
+            user_message = request.json.get("userMessage")
+            fuzzy_check = fuzzy_match(user_message.lower())
+            tag = predict_tag_v2(fuzzy_check)
 
-    return render_template("result.html", response=response)
+        chatbot_response = generate_response(tag, current_context)
+        update_context(tag)
+        # current_context = current_context
 
+        time.sleep(1)
+        print(current_context)
+        return jsonify(
+            {"user_message": user_message, "chatbot_response": chatbot_response}
+        )
 
-# os.system("CLS")
-# start_chat_v2()
 
 if __name__ == "__main__":
-    current_context = ""
-    input_data = "Hello there!"
-    response = generate_response(input_data, current_context)
-    print(f"Response Data: {response}")
     app.run(debug=True)
